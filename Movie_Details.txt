@@ -1,0 +1,4 @@
+select m.MOVIE_ID, m.MOVIE_NAME, s.SHOW_TIME from SCREENING_MASTER s join MOVIE_MASTER m
+on s.MOVIE_ID = m.MOVIE_ID 
+where lower(m.language) like 'tamil' and m.CERTIFICATION != 'A'
+order by s.SCREENING_ID DESC;
